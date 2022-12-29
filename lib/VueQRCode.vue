@@ -1,36 +1,36 @@
 
 <template>
-	<h1>{{ props.input }}</h1>
+	<div class="qr-container" v-html="qrCode" />
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue"
 import QRCode from "qrcode"
 
-const props = defineProps({
-	input: { type: String }
-})
+const props = defineProps<{
+	input: string
+}>()
 
 const qrCode = ref()
 
-const GenerateHTMLQR = async function() {
-	let svgBinary = []
+const GenerateHTMLQR = async function(input: string) {
+	let qrPixels = new Uint8Array
 	try {
-		const svg = QRCode.create(props.input, { errorCorrectionLevel: "H"})
-		svgBinary = svg.modules.data
+		const qrObject = QRCode.create(input, { errorCorrectionLevel: "H"})
+		qrPixels = qrObject.modules.data
 	}
 	catch(e) {
 		console.log("error", e)
 	}
 	const qrDiv = document.createElement("div")
-	const side = Math.sqrt(svgBinary.length)
+	const side = Math.sqrt(qrPixels.length)
 	for (let i = 0; i < side; i++) {
 		const qrRow = document.createElement("div")
 		qrRow.className = "qr-row"
 		qrDiv.appendChild(qrRow)
 		for (let j = 0; j < side; j++) {
 			const pixelDiv = document.createElement("div")
-			pixelDiv.className = svgBinary[i * side + j] == 1 ? "qr-pixel qr-pixel-black" : "qr-pixel qr-pixel-white"
+			pixelDiv.className = qrPixels[i * side + j] == 1 ? "qr-pixel qr-pixel-black" : "qr-pixel qr-pixel-white"
 			qrRow.appendChild(pixelDiv)
 		}
 	}
@@ -38,7 +38,7 @@ const GenerateHTMLQR = async function() {
 }
 
 onMounted(() => {
-	GenerateHTMLQR()
+	GenerateHTMLQR(props.input)
 })
 
 </script>

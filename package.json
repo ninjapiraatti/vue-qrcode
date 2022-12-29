@@ -1,8 +1,10 @@
 {
 	"name": "vue-html-qrcode",
-	"version": "1.0.4",
+	"version": "1.0.7",
 	"type": "module",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"main": "./dist/vue-html-qrcode.umd.cjs",
 	"module": "./dist/vue-html-qrcode.js",
 	"types": "./dist/main.d.ts",
@@ -19,11 +21,12 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"vue": "^3.2.45",
-		"qrcode": "^1.5.1"
+		"qrcode": "^1.5.1",
+		"vue": "3.2.43"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.18",
+		"@types/qrcode": "^1.5.0",
 		"@vitejs/plugin-vue": "^4.0.0",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0",
