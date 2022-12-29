@@ -1,16 +1,15 @@
 {
-	"name": "vue-qrcode",
-	"private": true,
-	"version": "1.0.0",
+	"name": "vue-html-qrcode",
+	"version": "1.0.3",
 	"type": "module",
 	"files": ["dist"],
-	"main": "./dist/vue-component-npm-example.umd.cjs",
-	"module": "./dist/vue-component-npm-example.js",
+	"main": "./dist/vue-html-qrcode.umd.cjs",
+	"module": "./dist/vue-html-qrcode.js",
 	"types": "./dist/main.d.ts",
 	"exports": {
 		".": {
-			"import": "./dist/vue-component-npm-example.js",
-			"require": "./dist/vue-component-npm-example.umd.js"
+			"import": "./dist/vue-html-qrcode.js",
+			"require": "./dist/vue-html-qrcode.umd.js"
 		},
 		"./dist/style.css": "./dist/style.css"
 	},
