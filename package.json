@@ -1,6 +1,6 @@
 {
 	"name": "vue-html-qrcode",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"type": "module",
 	"files": ["dist"],
 	"main": "./dist/vue-html-qrcode.umd.cjs",
@@ -19,7 +19,8 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"vue": "^3.2.45"
+		"vue": "^3.2.45",
+		"qrcode": "^1.5.1"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.18",
