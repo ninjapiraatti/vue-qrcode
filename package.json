@@ -1,6 +1,9 @@
 {
 	"name": "vue-html-qrcode",
-	"version": "1.0.9",
+	"version": "1.0.10",
+	"author": "Tuomas Louekari",
+  "license": "MIT",
+  "homepage": "https://github.com/ninjapiraatti/vue-qrcode",
 	"type": "module",
 	"files": [
 		"dist"
@@ -12,8 +15,7 @@
 		".": {
 			"import": "./dist/vue-html-qrcode.js",
 			"require": "./dist/vue-html-qrcode.umd.js"
-		},
-		"./dist/style.css": "./dist/style.css"
+		}
 	},
 	"scripts": {
 		"dev": "vite",
@@ -22,7 +24,7 @@
 	},
 	"dependencies": {
 		"qrcode": "^1.5.1",
-		"vue": "3.2.43"
+		"vue": "^3.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.18",

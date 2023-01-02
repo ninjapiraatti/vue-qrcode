@@ -17,10 +17,10 @@ import { VueQRCode } from "vue-html-qrcode"
 And add it to your template:
 ```html
 <VueQRCode
-			input="foo"
-			fill-color="#000"
-			background-color="#fff"
-			pixel-size="4px" />
+  input="foo"
+  fill-color="#000"
+  background-color="#fff"
+  pixel-size="4px" />
 
 ```
 
@@ -28,9 +28,7 @@ And add it to your template:
 
 | Option | Value type | Default value |
 | --- | --- | --- |
-| input  | String | Nothing. This is a required option. |
+| input  | String | Nothing. This value is required. |
 | fillColor  | Color for CSS, for example "#000" | "#000" |
 | backgroundColor  | Color for CSS, for example "#fff" | "transparent" |
 | pixelSize | Size in pixels, for example "1.5px" | "4px" |
-
-
